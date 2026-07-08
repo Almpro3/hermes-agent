@@ -2,7 +2,7 @@ services:
   hermes:
     image: nousresearch/hermes-agent:latest
     restart: unless-stopped
-    command: sleep infinity
+    command: gateway run
 
     environment:
       HERMES_DASHBOARD: "1"
