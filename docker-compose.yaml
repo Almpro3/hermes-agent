@@ -1,0 +1,18 @@
+services:
+  hermes:
+    image: nousresearch/hermes-agent:latest
+    restart: unless-stopped
+    command: sleep infinity
+
+    environment:
+      HERMES_DASHBOARD: "1"
+
+    volumes:
+      - hermes-data:/opt/data
+
+    expose:
+      - "9119"
+      - "8642"
+
+volumes:
+  hermes-data:
